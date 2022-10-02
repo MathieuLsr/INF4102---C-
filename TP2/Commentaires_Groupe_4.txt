@@ -1,0 +1,24 @@
+Groupe qui fait les commentaires : Groupe 3 - Perrine MOLINAS & Mathieu LESUR
+
+Groupe qui reçoit les commentaires : Groupe 4 - Clément LAVIE & Timothée ROYER
+
+
+Exercice 1 : /Cartesian_vector_param/
+
+Nous n'avons pas compris exactement les mêmes consignes. Toutes les remarques faites ci-dessous sont selon les consignes que l'on a comprises nous. Il est possible qu'on se soit trompé... 
+
+D'après ce qu'on a compris : 
+
+Le but de define NDIM est de pouvoir moduler le code en fonction de NDIM. 
+Si NDIM = 4, votre code ne fonctionne plus. Pour nous, il faudrait intégré un tableau de taille NDIM, qui contient les valeurs de la "liste". 
+
+Le Vector est une sorte de liste auquel on applique différentes opérations. 
+Par exemple : Liste + 5, c'est équivalent à rajouter +5 à tous les éléments. 
+
+L'opérateur [], renverra donc l'objet dans la case correspondante du tableau. 
+
+Dans la config.h, on utilise aussi un "using value = int" pour pouvoir modifier facilement ce type. Il faut donc utiliser "value" et non "int" pour les arguments des méthodes pour que le code soit flexible. 
+
+Pour std::initializer_list<E>, un iterator existe sur cet objet, on peut donc parcourir l'ensemble des éléments facilement et donc remplir le tableau. Pour nous, aucun autre constructor n'est nécessaire. 
+
+De même, une fois que tous les changements seront faits, vous n'aurez plus besoin de faire ce genre de chose "#if (NDIM==3)" vu que le code sera totalement fait en fonction de NDIM.
