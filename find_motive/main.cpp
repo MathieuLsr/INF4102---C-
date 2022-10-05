@@ -30,9 +30,10 @@ int main(int argc, char const *argv[])
     string ch;
     while (1) {
         my_file >> ch;
-        if(ch == word) compt++ ;
+        if(ch.find(word) != std::string::npos) compt ++ ;
         if (my_file.eof()) break;
     }
+    
 
 	my_file.close();
 
