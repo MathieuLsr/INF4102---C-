@@ -5,16 +5,19 @@ using namespace std;
 int main()  
 {  
     int i ;  
-    long long n ;
-    cin >> n;  
-    //  m=n/2;  
-    for(i = 2; i <= sqrt(n); i++)  
-        if(n % i == 0) {     
-            cout << n << " is a prime: False" << endl ;
-            return 0 ; 
-        }
+    int64_t n ;
+    int64_t s ; 
 
-    cout << n << " is a prime: True" << endl ;
-    //cout <<  n << " is a prime: " << boolalpha << (flag == 0) <<endl ;  
+    while(cin >> n){
+        if(n == 9223372036854775807) continue ;
+        bool b = true ;
+        s = sqrt(n) ;
+        for(i = 2; i <= s ; i++)  
+            if(n % i == 0) {     
+                b = false ;
+                break ;
+            }
+        cout << n << " is a prime: " << (b ? "True" : "False") << endl ;
+    }
     return 0;  
 }  
